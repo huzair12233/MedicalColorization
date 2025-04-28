@@ -10,7 +10,7 @@ OUTPUT_NRRD_PATH = "colorized_3d_volume.nrrd"
 TMP_SLICE_DIR = "temp_slices/"
 TMP_COLORIZED_DIR = "temp_colorized_slices/"
 
-# Model files
+# Model file
 prototxt_path = "models/colorization_deploy_v2.prototxt"
 model_path = "models/colorization_release_v2.caffemodel"
 cluster_path = "models/pts_in_hull.npy"
