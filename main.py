@@ -5,8 +5,8 @@ import SimpleITK as sitk
 import matplotlib.pyplot as plt
 
 # ====== CONFIG ====== The file path changes as per the dataset
-INPUT_NRRD_PATH = "R-002-1.nrrd"  # <-- Change this to your grayscale .nrrd file
-OUTPUT_NRRD_PATH = "colorized_3d_volume.nrrd"
+INPUT_NRRD_PATH = "input/R-002-1.nrrd"  # <-- Change this to your grayscale .nrrd file
+OUTPUT_NRRD_PATH = "output/colorized_3d_volume.nrrd"
 TMP_SLICE_DIR = "temp_slices/"
 TMP_COLORIZED_DIR = "temp_colorized_slices/"
 
@@ -14,6 +14,9 @@ TMP_COLORIZED_DIR = "temp_colorized_slices/"
 prototxt_path = "models/colorization_deploy_v2.prototxt"
 model_path = "models/colorization_release_v2.caffemodel"
 cluster_path = "models/pts_in_hull.npy"
+
+if not os.path.exists(OUTPUT_NRRD_PATH):
+    os.makedirs("output", exist_ok=True)
 
 # ====== SETUP ======
 os.makedirs(TMP_SLICE_DIR, exist_ok=True)
