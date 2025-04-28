@@ -4,7 +4,7 @@ import cv2
 import SimpleITK as sitk
 import matplotlib.pyplot as plt
 
-# ====== CONFIG ======
+# ====== CONFIG ====== The file path changes as per the dataset
 INPUT_NRRD_PATH = "R-002-1.nrrd"  # <-- Change this to your grayscale .nrrd file
 OUTPUT_NRRD_PATH = "colorized_3d_volume.nrrd"
 TMP_SLICE_DIR = "temp_slices/"
